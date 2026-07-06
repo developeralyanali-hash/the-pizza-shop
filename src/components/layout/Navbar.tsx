@@ -33,7 +33,7 @@ export default function Navbar() {
 
         {/* LOGO */}
         <div className="text-xl md:text-2xl font-bold">
-          The Pizza Shop
+          Italian Pizza
         </div>
 
         {/* DESKTOP NAV */}
