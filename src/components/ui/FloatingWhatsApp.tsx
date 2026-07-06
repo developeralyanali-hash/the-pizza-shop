@@ -6,20 +6,19 @@ export default function FloatingWhatsApp() {
 
   const whatsappMessage = `👋 Hello The Pizza Shop!
 
-I have a question about your menu.
+I'd like some information before placing an order.
 
-Could you please help me?
+Could you please help me with:
 
-🍕 I'd like to know about:
-
-• Today's Deals
-• Pizza Sizes
-• Delivery Charges
-• Delivery Time
+🍕 Today's Deals
+📋 Full Menu
+📏 Pizza Sizes
+🚚 Delivery Charges
+⏱️ Estimated Delivery Time
 
 Thank you!`;
 
-  const whatsappUrl = `https://wa.me/923018408177?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/923349489073?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="fixed bottom-5 right-5 z-50 group">

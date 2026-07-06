@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa";
 import { ArrowRight, Plus, Star, Zap } from "lucide-react";
 import { menuData } from "@/data/menu";
 import { useCartStore } from "@/store/cartStore";
@@ -35,7 +34,6 @@ export default function PopularItems() {
           </span>
         </div>
 
-        {/* HEADING */}
         <div className="relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] md:w-[350px] h-[80px] md:h-[120px] bg-[rgb(var(--primary))] blur-[60px] md:blur-[100px] opacity-25 md:opacity-30 -z-10" />
 
@@ -47,7 +45,6 @@ export default function PopularItems() {
           </h2>
         </div>
 
-        {/* SUBTEXT (IMPROVED + SLIGHTLY EXPANDED, PREMIUM) */}
         <p className="text-muted mt-3 md:mt-4 text-base md:text-lg max-w-2xl mx-auto">
           These dishes are the <span className="text-white font-semibold">most loved by our customers</span>.
           <span className="text-[rgb(var(--primary))] font-bold"> Fresh, hot & delivered in 30 minutes.</span>
@@ -66,7 +63,6 @@ export default function PopularItems() {
             transition={{ duration: 0.4, delay: index * 0.08 }}
             className="group relative bg-gradient-to-br from-[rgb(var(--card))]/90 to-[rgb(var(--card))]/60 backdrop-blur-sm rounded-2xl border border-white/5 hover:border-[rgb(var(--primary))]/40 transition-all duration-300 hover:shadow-[0_0_50px_rgba(255,77,0,0.25)] overflow-hidden"
           >
-            {/* IMAGE */}
             <div className="relative h-[200px] md:h-[240px] w-full overflow-hidden">
               <Image
                 src={item.image}
@@ -78,7 +74,6 @@ export default function PopularItems() {
               />
             </div>
 
-            {/* INFO */}
             <div className="p-4 md:p-5 flex flex-col">
 
               <div className="flex items-center justify-between mb-2">
@@ -106,13 +101,31 @@ export default function PopularItems() {
                 </p>
               </div>
 
-              {/* BUTTONS */}
-
               <div className="flex flex-col gap-2">
 
-                {/* ORDER BUTTON (URDU FIXED → CLEAN ENGLISH CTA) */}
                 <a
-                  href={`https://wa.me/923349489073?text=I%20want%20${item.name}%20to%20order%20-%20Rs%20${item.price}`}
+                  href={`https://wa.me/923349489073?text=${encodeURIComponent(
+`🍕 Hello The Pizza Shop!
+
+I'd like to order:
+
+📦 Item:
+• ${item.name}
+
+💰 Price:
+Rs ${item.price}
+
+📍 Delivery Address:
+
+👤 Name:
+
+📞 Phone Number:
+
+💳 Payment Method:
+Cash / Online
+
+Thank you!`
+                  )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-gradient-to-r from-[#FF4D00] to-[#FF8A00] text-white text-sm md:text-base font-bold h-11 md:h-10 rounded-xl flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(255,77,0,0.4)] hover:shadow-[0_6px_30px_rgba(255,77,0,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 group"
@@ -121,7 +134,6 @@ export default function PopularItems() {
                   Order Now
                 </a>
 
-                {/* CART BUTTON (IMPROVED COPY) */}
                 <button
                   onClick={() =>
                     addItem({
@@ -134,12 +146,10 @@ export default function PopularItems() {
                   className="w-full bg-[rgb(var(--card))] border-2 border-white/10 hover:border-[rgb(var(--primary))] text-white text-sm md:text-base font-bold h-11 md:h-10 rounded-xl flex items-center justify-center gap-2 hover:bg-[rgb(var(--primary))]/10 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 group"
                 >
                   <Plus className="w-4 h-4 group-hover:rotate-90 transition-transform duration-300" />
-
                   Add to Cart
                   <span className="text-xs bg-[rgb(var(--primary))]/20 text-[rgb(var(--primary))] px-2 py-0.5 rounded-md font-bold">
                     +1
                   </span>
-
                 </button>
 
               </div>
@@ -148,7 +158,6 @@ export default function PopularItems() {
         ))}
       </div>
 
-      {/* VIEW MENU */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

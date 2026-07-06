@@ -8,7 +8,7 @@
     --muted: 161 161 170; /* #a1a1aa */
   }
 
-    * {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,49 +26,57 @@
   }
 
   /* Mobile-first font sizes */
-  h1 { @apply text-3xl md:text-5xl lg:text-6xl font-['Anton'] leading-tight; }
-  h2 { @apply text-2xl md:text-4xl font-['Anton'] leading-tight; }
-  h3 { @apply text-xl md:text-2xl font-semibold; }
+  h1 {
+    @apply text-3xl md:text-5xl lg:text-6xl font-['Anton'] leading-tight;
+  }
+
+  h2 {
+    @apply text-2xl md:text-4xl font-['Anton'] leading-tight;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-semibold;
+  }
 }
 
 @layer components {
   /* Container - Mobile friendly */
- .container {
+  .container {
     @apply w-full max-w-[1200px] mx-auto px-4 md:px-5;
   }
 
   /* Section - Mobile pe 60px, Desktop 100px */
- .section {
+  .section {
     @apply py-14 md:py-24 lg:py-[100px];
   }
 
   /* Buttons - Touch friendly 44px min */
- .btn {
+  .btn {
     @apply px-5 py-3 rounded-xl font-semibold inline-flex items-center justify-center min-h-[44px] transition-all duration-200;
   }
 
- .btn-primary {
+  .btn-primary {
     background-color: rgb(var(--primary));
     @apply text-white hover:opacity-90 hover:-translate-y-0.5 active:scale-95;
   }
 
- .btn-secondary {
+  .btn-secondary {
     @apply border border-[rgb(var(--muted))] text-white bg-transparent hover:bg-[rgb(var(--card))];
   }
 
   /* Cards - Fast hover, no layout shift */
- .card {
+  .card {
     background-color: rgb(var(--card));
     @apply rounded-2xl p-4 transition-transform duration-200 will-change-transform;
   }
 
- .card:hover {
+  .card:hover {
     @apply -translate-y-1 shadow-[0_10px_30px_rgba(255,77,0,0.15)];
   }
 }
 
 @layer utilities {
- .text-muted {
+  .text-muted {
     color: rgb(var(--muted));
   }
 }
@@ -85,11 +93,21 @@
 
 /* Reduce motion for speed */
 @media (prefers-reduced-motion: reduce) {
-    * {
-    animation-duration: 0.01ms!important;
-    transition-duration: 0.01ms!important;
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }
+
 html {
   scroll-behavior: smooth;
+}
+
+/* Fallback for old Chrome/Android < 100 */
+@supports not (backdrop-filter: blur(1px)) {
+  .backdrop-blur-xl,
+  .backdrop-blur-2xl {
+    backdrop-filter: none !important;
+    background: rgba(0, 0, 0, 0.85) !important;
+  }
 }
