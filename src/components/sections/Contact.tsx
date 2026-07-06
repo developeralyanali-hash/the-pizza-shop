@@ -6,14 +6,14 @@ const contactCards = [
   {
     title: "Call Now",
     icon: Phone,
-    value: "+92 923349489073",
+    value: "+92 334 9489073",
     subtext: "Tap to call instantly",
-    href: "tel:+923018408177",
+    href: "tel:+92 334 9489073",
   },
   {
     title: "WhatsApp Order",
     icon: MessageCircleIcon,
-    value: "0328-1413617",
+    value: "+92 334 9489073",
     subtext: "Quick ordering via chat",
     href: "https://wa.me/923349489073",
     external: true,

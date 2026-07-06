@@ -3,7 +3,7 @@ export const restaurant = {
 
   shortName: "The Pizza Shop Barki Road",
 
-  phone: "923018408177",
+  phone: "923349489073",
 
   displayPhone: "+92 301 8408177",
 
@@ -15,7 +15,7 @@ export const restaurant = {
   hours: "2 PM - 2 AM",
 
   whatsapp:
-    "https://wa.me/923018408177",
+    "https://wa.me/923349489073",
 
   foodpanda: "#",
 
