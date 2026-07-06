@@ -67,7 +67,7 @@ export default function Navbar() {
 
           {/* WHATSAPP */}
           <a
-            href="https://wa.me/923018408177"
+            href="https://wa.me/923349489073"
             target="_blank"
             className="hidden md:flex btn btn-primary"
           >
@@ -133,7 +133,7 @@ export default function Navbar() {
 </Link>
 
             <a
-              href="https://wa.me/923018408177"
+             href="https://wa.me/923349489073"
               target="_blank"
               className="btn btn-primary w-full"
             >

@@ -124,7 +124,7 @@ export default function MenuPage() {
               <div className="flex flex-col gap-2 mt-4">
 
                 <a
-                  href={`https://wa.me/923018408177?text=${encodeURIComponent(
+                  href={`https://wa.me/923349489073?text=${encodeURIComponent(
 `🍕 Hello The Pizza Shop!
 
 I'd like to order the following item:

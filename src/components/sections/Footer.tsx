@@ -74,7 +74,7 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
 
               <a
-                href="https://wa.me/923018408177"
+                href="https://wa.me/923349489073"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#FF4D00] to-[#FF8A00] px-4 py-3 text-white font-bold shadow-[0_0_25px_rgba(255,77,0,0.35)] hover:scale-[1.02] transition"

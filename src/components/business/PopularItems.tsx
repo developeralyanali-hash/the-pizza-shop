@@ -112,7 +112,7 @@ export default function PopularItems() {
 
                 {/* ORDER BUTTON (URDU FIXED → CLEAN ENGLISH CTA) */}
                 <a
-                  href={`https://wa.me/923018408177?text=I%20want%20${item.name}%20to%20order%20-%20Rs%20${item.price}`}
+                  href={`https://wa.me/923349489073?text=I%20want%20${item.name}%20to%20order%20-%20Rs%20${item.price}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-gradient-to-r from-[#FF4D00] to-[#FF8A00] text-white text-sm md:text-base font-bold h-11 md:h-10 rounded-xl flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(255,77,0,0.4)] hover:shadow-[0_6px_30px_rgba(255,77,0,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 group"

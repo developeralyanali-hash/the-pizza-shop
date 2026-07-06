@@ -71,7 +71,7 @@ Please confirm my order and share the estimated delivery time.
 
 Thank you! 🍕`;
 
-  const whatsappUrl = `https://wa.me/923018408177?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/923349489073?text=${encodeURIComponent(
     whatsappMessage
   )}`;
 
